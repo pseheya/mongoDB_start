@@ -2,7 +2,6 @@
   "name": "packege.json",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +15,8 @@
     "url": "https://github.com/pseheya/mongoDB_start/issues"
   },
   "homepage": "https://github.com/pseheya/mongoDB_start#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "mongodb": "^6.12.0"
+  }
 }
