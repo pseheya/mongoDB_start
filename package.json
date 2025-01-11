@@ -17,6 +17,8 @@
   "homepage": "https://github.com/pseheya/mongoDB_start#readme",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
     "mongodb": "^6.12.0"
   }
 }

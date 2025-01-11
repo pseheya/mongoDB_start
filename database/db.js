@@ -1,4 +1,9 @@
+// const ENV = process.env.NODE_ENV || "mongoDB";
 const { MongoClient } = require("mongodb");
+
+// console.log(process.env);
+// console.log(ENV);
+// console.log(process.env.MONGODB_URI);
 
 const {
   ukrainianWords,
@@ -6,7 +11,8 @@ const {
   spanishWords,
 } = require("../data/testData/index");
 
-const uri = "mongodb://kirota56:qjVDDxCgaX72D2tZ@109.81.170.211/";
+const uri =
+  "mongodb+srv://afirstuser:8989okidoki789@cluster0.fgrln.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const dbName = "languageDB";
 const ukrainianCollection = "ukrainian";
 const frCollection = "french";
@@ -25,7 +31,6 @@ async function createDataBase() {
     const frenchCollection = db.collection(frCollection);
     const spanishCollection = db.collection(spnCollection);
 
-    // Insert data into collections
     const insertUkrainian = await urkCollection.insertMany(ukrainianWords);
     console.log(
       `Inserted ${insertUkrainian.insertedCount} documents into Ukrainian collection`
@@ -48,4 +53,10 @@ async function createDataBase() {
   }
 }
 
-createDataBase();
+createDataBase()
+  .then(() => {
+    console.log("No errors");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
