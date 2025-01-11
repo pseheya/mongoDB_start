@@ -1,9 +1,5 @@
-// const ENV = process.env.NODE_ENV || "mongoDB";
+require("dotenv").config();
 const { MongoClient } = require("mongodb");
-
-// console.log(process.env);
-// console.log(ENV);
-// console.log(process.env.MONGODB_URI);
 
 const {
   ukrainianWords,
@@ -11,8 +7,7 @@ const {
   spanishWords,
 } = require("../data/testData/index");
 
-const uri =
-  "mongodb+srv://afirstuser:8989okidoki789@cluster0.fgrln.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = process.env.MONGODB_URI;
 const dbName = "languageDB";
 const ukrainianCollection = "ukrainian";
 const frCollection = "french";
