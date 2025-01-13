@@ -1,4 +1,4 @@
-module.exports = [
+export const ukrainianWords = [
   { rank: 1, targetWord: "як", englishWord: "as" },
   { rank: 2, targetWord: "Я", englishWord: "I" },
   { rank: 3, targetWord: "його", englishWord: "his" },

@@ -1,4 +1,4 @@
-module.exports = [
+export const frenchWords = [
   { rank: 1, targetWord: "comme", englishWord: "as" },
   { rank: 2, targetWord: "je", englishWord: "I" },
   { rank: 3, targetWord: "son", englishWord: "his" },
